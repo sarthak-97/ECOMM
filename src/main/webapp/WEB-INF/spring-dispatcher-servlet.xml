@@ -45,7 +45,7 @@ classpath:/org/springframework/aop/config/spring-aop-3.0.xsd
        
          <property name="username" value="system" />
 
-		 	<property name="password" value="sar115" />
+		 	<property name="password" value="****" />  <!-- add your password here -->
 
   
      </bean>
