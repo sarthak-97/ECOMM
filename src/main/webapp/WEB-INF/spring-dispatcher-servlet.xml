@@ -20,7 +20,7 @@ classpath:/org/springframework/aop/config/spring-aop-3.0.xsd
 
 	<mvc:resources mapping="/css/**" location="/WEB-INF/css/"/>
 	<mvc:resources mapping="/js/**" location="/WEB-INF/js/"/>
-	<mvc:resources mapping="/img/**" location="/WEB-INF/img/"/>
+	<mvc:resources mapping="/imgs/**" location="/WEB-INF/imgs/"/>
 	<mvc:resources mapping="/vendor/**" location="/WEB-INF/vendor/"/>
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
@@ -45,7 +45,7 @@ classpath:/org/springframework/aop/config/spring-aop-3.0.xsd
        
          <property name="username" value="system" />
 
-		 	<property name="password" value="****" />  <!-- add your password here -->
+		 	<property name="password" value="sar115" />  <!-- add your password here -->
 
   
      </bean>

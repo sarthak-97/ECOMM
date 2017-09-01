@@ -27,7 +27,7 @@ public class MainController {
 				@RequestMapping(value = "/", method = RequestMethod.GET)
 				public ModelAndView landingPage(HttpSession httpSession){
 		
-						ModelAndView model=new ModelAndView("index");
+						ModelAndView model=new ModelAndView("index2");
 	                    model.addObject("data","LOGIN/SIGNUP");
 	                    
 						return model;

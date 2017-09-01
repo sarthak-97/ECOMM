@@ -36,7 +36,7 @@ public class LoginController {
 	@RequestMapping(value = "/signup", method = RequestMethod.POST)
 	public ModelAndView signup(@ModelAttribute("userdet") org.vardanapp.models.VD_UserDetails userdet) {
 		Session session = sessionFactory.openSession();
-		ModelAndView model = new ModelAndView("index");
+		ModelAndView model = new ModelAndView("index22");
 		if (session.get(VD_UserDetails.class,userdet.getEmailId()) == null) {
 			
 			session.beginTransaction();
@@ -74,22 +74,22 @@ public class LoginController {
 							httpSession.setAttribute("SESSION_name", userdet.getFirstName());
 						
 							if((String) httpSession.getAttribute("SESSION_email")!=null){
-								model = new ModelAndView("index");
+								model = new ModelAndView("index2");
 								model.addObject("username","Logout Here" + "  " +	httpSession.getAttribute("SESSION_name"));
 								
 				               }
 							else{
-								model = new ModelAndView("index");
+								model = new ModelAndView("index2");
 								model.addObject("invalid", "LOG IN FIRST TO CONTINUE");
 							}
 			} else {
-				model = new ModelAndView("index");
+				model = new ModelAndView("index2");
 				model.addObject("invalid", "invalid details");
 			}
 		}
 
 		else {
-			model = new ModelAndView("index");
+			model = new ModelAndView("index2");
 			model.addObject("invalid", "no record found");
 		}
 		session.close();
@@ -108,7 +108,7 @@ public class LoginController {
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
 	public ModelAndView LogoutController(HttpSession httpSession) {
 		httpSession.invalidate();
-		ModelAndView model = new ModelAndView("index");
+		ModelAndView model = new ModelAndView("index2");
 		model.addObject("invalid", "successfully logged out");
 		model.addObject("data","LOGIN/SIGNUP");
 		return model;
