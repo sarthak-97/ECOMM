@@ -33,4 +33,13 @@ public class MainController {
 						return model;
 				}
 
+				
+				@RequestMapping(value = "/index", method = RequestMethod.GET)
+				public ModelAndView landingPage_2(HttpSession httpSession){
+		
+						ModelAndView model=new ModelAndView("index2");
+	                    model.addObject("data","LOGIN/SIGNUP");
+	                    
+						return model;
+				}
 }

@@ -30,17 +30,20 @@
     
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo"><span style="font-family: "Comic Sans MS";"><img src="imgs/Logo.JPG" height="70"></span></a>
+      <a id="logo-container" href="#" class="brand-logo"><span style="font-family: "Comic Sans MS";"><img src="imgs/Logo.JPG" height="60"></span></a>
       <ul class="right hide-on-med-and-down">
         <li><a id="modlbtn" data-target="modal1">${data}</a></li>
         <li><a href="#">About</a></li>
+                <li><a href="services">Services</a></li>
         <li><a href="#">Contact Us</a></li>
+        
          <li><a href="logout">${username}</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
           <li><a id="modlbtn" data-target="modal1">${data}</a></li>
         <li><a href="#">About</a></li>
+        <li><a href="services">Services</a></li>
         <li><a href="#">Contact Us</a></li>
           <li><a href="logout">${username}</a></li>
       </ul>
@@ -105,7 +108,7 @@
                                 </p>
                                 <p> 
                                     <label for="usernamesignup" class="uname" >Contact Number</label>
-                                    <input id="usernamesignup" name="contact" required="required" type="text" placeholder="mysuperusername690" />
+                                    <input id="usernamesignup" name="contact" required="required" pattern="[7-9]{1}[0-9]{9}" type="text" placeholder="without 0 ie 9898989888" />
                                 </p>
                                 <p> 
                                     <label for="passwordsignup" class="youpasswd" >Your password </label>

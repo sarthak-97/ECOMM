@@ -39,12 +39,24 @@ public class ServicesController {
 				 */
 	
 	
-				@RequestMapping(value = "/services/recharge", method = RequestMethod.GET)
+				@RequestMapping(value = "/services", method = RequestMethod.GET)
 				public ModelAndView Recharge(HttpSession httpSession){
 					
-						ModelAndView model= new ModelAndView("recharge");
-						model.addObject("username",httpSession.getAttribute("SESSION_name"));
-		
+					ModelAndView model;
+					
+					if((String) httpSession.getAttribute("SESSION_email") != null)
+						{
+							model= new ModelAndView("services");
+						   	model.addObject("username","Logout Here" + "  " +	httpSession.getAttribute("SESSION_name"));
+						}
+					
+					else{
+						
+						model=new ModelAndView("index2");
+						model.addObject("data","LOGIN/SIGNUP");
+						model.addObject("invalid", "LOG IN FIRST TO CONTINUE");
+					}
+					
 						return model;
 				}
 	

@@ -6,6 +6,7 @@ package org.vardanapp.models;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 
 @Entity
 public class VD_UserDetails {
@@ -16,6 +17,7 @@ public class VD_UserDetails {
 	private String FirstName;
 	private String LastName;
 	private String Country;
+	
 	private int Contact;
 	private String Password;
 	public String getEmailId() {
