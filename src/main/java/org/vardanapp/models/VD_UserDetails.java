@@ -18,7 +18,7 @@ public class VD_UserDetails {
 	private String LastName;
 	private String Country;
 	
-	private int Contact;
+	private long Contact;
 	private String Password;
 	public String getEmailId() {
 		return EmailId;
@@ -44,10 +44,10 @@ public class VD_UserDetails {
 	public void setCountry(String country) {
 		Country = country;
 	}
-	public int getContact() {
+	public long getContact() {
 		return Contact;
 	}
-	public void setContact(int contact) {
+	public void setContact(long contact) {
 		Contact = contact;
 	}
 	public String getPassword() {
