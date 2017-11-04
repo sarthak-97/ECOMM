@@ -1,4 +1,4 @@
-# Vardan_App
+# ECOMM
 
 
 One Paragraph of project description goes here
